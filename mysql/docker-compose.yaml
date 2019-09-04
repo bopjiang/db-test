@@ -3,14 +3,17 @@ version: '3.1'
 services:
 
   db:
-    image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
+    image: mysql:5.7.26
+    command: --default-authentication-plugin=mysql_native_password --plugin-load=server_audit.so
     #restart: always
     volumes:
       - ./data:/var/lib/mysql
       - ./conf.d:/etc/mysql/conf.d
+      - ./plugin:/usr/lib/mysql/plugin
+      - ./logs/audit:/data/mysql/auditlogs
     ports:
       - 127.0.0.1:3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: test
 

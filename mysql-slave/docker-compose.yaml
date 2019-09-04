@@ -9,6 +9,7 @@ services:
     volumes:
       - ./data:/var/lib/mysql
       - ./conf.d:/etc/mysql/conf.d
+      - ./logs/audit:/data/mysql/auditlogs
     ports:
       - 127.0.0.1:13306:3306
     environment:
