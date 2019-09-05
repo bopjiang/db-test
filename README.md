@@ -8,7 +8,7 @@ MariaDB Audit Plugin version `1.4.8`.
 
 
 ## Q&A
-### unknown variable 'server_audit_*' when starting MySQL with Audit Plugin configured 
+### unknown variable 'server_audit_*' when starting MySQL with Audit Plugin configured
 ```bash
 db_1  | ERROR: mysqld failed while attempting to check config
 db_1  | command was: "mysqld --default-authentication-plugin=mysql_native_password --verbose --help"
