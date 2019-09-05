@@ -4,7 +4,7 @@ services:
 
   db:
     image: mysql:5.7.26
-    command: --default-authentication-plugin=mysql_native_password --plugin-load=server_audit.so
+    command: --default-authentication-plugin=mysql_native_password 
     #restart: always
     volumes:
       - ./data:/var/lib/mysql
